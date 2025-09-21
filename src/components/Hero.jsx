@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-[70vh] grid place-items-center bg-cover bg-center"
-      style={{ backgroundImage: `url('/assets/hero.jpg')` }}
+      style={{ backgroundImage: `url('/assets/BeerRun.png')` }}
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative text-center px-6">

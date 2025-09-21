@@ -16,14 +16,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <div>
-        <p>Miguel is gay</p>
-      </div>
+      <div></div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          How my boyfrieds does miguel have?: {count}
-        </button>
+        <button onClick={() => setCount((count) => count + 1)}>{count}</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
