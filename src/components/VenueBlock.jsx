@@ -4,7 +4,7 @@ import { event } from '../data/event';
 export default function VenueBlock() {
   const v = event.venue;
   return (
-    <section id="info" className="bg-slate-50 py-12">
+    <section id="info" className="bg-black py-12">
       <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
         <div>
           <h3 className="text-xl font-bold">Venue Location</h3>

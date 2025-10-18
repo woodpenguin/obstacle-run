@@ -1,4 +1,9 @@
 // src/data/event.js
+import medal from '../assets/medal.jpg';
+import beerwalk from '../assets/beerwalk.jpg';
+import snacks from '../assets/snacks.jpg';
+import handshake from '../assets/handshake.jpg';
+
 export const event = {
   name: 'Obstacle Run LA',
   city: 'Los Angeles, CA',
@@ -16,10 +21,10 @@ export const event = {
   },
   waves: ['8:30', '9:00', '9:30', '10:00', '10:30', '11:00'],
   perks: [
-    { title: 'Medal', icon: '/assets/medal.svg' },
-    { title: 'Bib', icon: '/assets/bib.svg' },
-    { title: 'Headband', icon: '/assets/headband.svg' },
-    { title: 'Bag Drop', icon: '/assets/bag.svg' },
+    { title: 'Medal', icon: medal },
+    { title: 'Beer', icon: beerwalk },
+    { title: 'Snacks', icon: snacks },
+    { title: 'Firm Handshake', icon: handshake },
   ],
   registerUrl: '/register', // or external link
 };
