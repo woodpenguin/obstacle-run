@@ -2,33 +2,39 @@
 import { event } from '../data/event';
 
 export default function VenueBlock() {
-  const v = event.venue;
   return (
-    <section id="info" className="bg-black py-12">
-      <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-        <div>
-          <h3 className="text-xl font-bold">Venue Location</h3>
-          <p className="mt-2">{v.name}</p>
-          <p className="text-slate-600">{v.address}</p>
-          <p className="mt-4">
-            <span className="font-semibold">Parking:</span> ${v.parking.price}{' '}
-            {v.parking.note}
-          </p>
-          <a
-            className="mt-3 inline-block text-indigo-600 underline"
-            target="_blank"
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(v.name + ' ' + v.address)}`}
-          >
-            Open in Google Maps
-          </a>
+    <section id="venue" className="py-16 md:py-24">
+      <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="relative rounded-[--radius-2xl] overflow-hidden border border-cream/10">
+          <img
+            src={event.venueImage ?? '/venue.jpg'}
+            alt={event.venueName ?? 'Venue'}
+            className="w-full h-[300px] md:h-[420px] object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10" />
         </div>
+
         <div>
-          <h3 className="text-xl font-bold">Opening Hours</h3>
-          <ul className="mt-2 list-disc ml-5 space-y-1">
-            {v.openingHours.map((h, i) => (
-              <li key={i}>{h}</li>
-            ))}
+          <h2 className="font-display text-3xl md:text-4xl">
+            {event.venueName ?? 'The Venue'}
+          </h2>
+          <p className="mt-3 opacity-80">
+            {event.venueAddress ?? '123 Main St, Los Angeles, CA'}
+          </p>
+          <ul className="mt-6 space-y-2 text-sm opacity-90">
+            <li>• Packet pickup opens {event.packetPickup ?? '7:00 AM'}</li>
+            <li>• Race starts {event.raceStart ?? '8:00 AM'}</li>
+            <li>• Beer garden {event.beerGarden ?? 'after the finish'}</li>
           </ul>
+
+          {event.mapsUrl && (
+            <a
+              href={event.mapsUrl}
+              className="mt-8 inline-block rounded-[--radius-2xl] border border-cream/30 px-6 py-3 text-sm uppercase tracking-widest hover:-translate-y-0.5 hover:border-cream transition"
+            >
+              Open in Maps
+            </a>
+          )}
         </div>
       </div>
     </section>

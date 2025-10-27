@@ -12,8 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.13"
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
@@ -27,6 +26,20 @@
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.16",
     "vite": "^7.1.2"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodpenguin/obstacle-run.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woodpenguin/obstacle-run/issues"
+  },
+  "homepage": "https://github.com/woodpenguin/obstacle-run#readme"
 }

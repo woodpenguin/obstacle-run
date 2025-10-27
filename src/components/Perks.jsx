@@ -1,35 +1,27 @@
+// src/components/Perks.jsx
 import { event } from '../data/event';
 
 export default function Perks() {
   return (
-    <section className="py-12" id="perks">
-      <h2 className="text-2xl md:text-3xl font-bold text-center">
-        What&apos;s Included
-      </h2>
+    <section id="perks" className="py-16 md:py-24">
+      <h2 className="font-display text-3xl md:text-4xl">What’s Included</h2>
+      <p className="mt-2 opacity-80">Perks that make the run worth the fun.</p>
 
-      <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6">
+      <div className="mt-10 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {event.perks.map((p) => (
           <article
             key={p.title}
-            className="group relative rounded-2xl p-6 bg-gradient-to-b from-slate-900 to-black border border-white/10 shadow-sm hover:shadow-lg hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
+            className="group relative rounded-[--radius-2xl] border border-cream/10 p-6 hover:border-cream/25 transition"
           >
-            {/* Icon badge */}
-            <div className="mx-auto mb-4 h-14 w-14 rounded-full overflow-hidden ring-1 ring-white/10 shadow-sm">
+            <div className="mx-auto mb-4 h-14 w-14 overflow-hidden rounded-full ring-1 ring-cream/10">
               <img
                 src={p.icon}
                 alt={p.title}
-                loading="lazy"
-                className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-200"
+                className="h-full w-full object-cover group-hover:scale-[1.03] transition"
               />
             </div>
-
-            {/* Title */}
-            <h3 className="text-center font-semibold tracking-tight text-slate-100">
-              {p.title}
-            </h3>
-
-            {/* Optional subtle accent line */}
-            <div className="pointer-events-none absolute inset-x-6 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <h3 className="font-display text-lg">{p.title}</h3>
+            {p.copy && <p className="mt-2 text-sm opacity-80">{p.copy}</p>}
           </article>
         ))}
       </div>

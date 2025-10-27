@@ -1,23 +1,34 @@
 // src/components/Sponsors.jsx
-
 import sonic from '../assets/sonic.jpg';
 import mywallet from '../assets/emptywallet.jpg';
 const sponsors = [sonic, mywallet];
+
 export default function Sponsors() {
   return (
-    <section className="py-12 bg-slate-900">
-      <h2 className="text-white text-center text-2xl font-bold">
-        They’re On Our Side
-      </h2>
-      <div className="mt-8 max-w-5xl mx-auto flex justify-center gap-6 px-6 center">
-        {sponsors.map((src, i) => (
-          <div
-            key={i}
-            className="bg-white/5 rounded-xl p-6 grid place-items-center"
-          >
-            <img src={src} alt="" className="max-h-10" />
+    <section className="py-16 md:py-24">
+      <h2 className="font-display text-2xl md:text-3xl">They’re On Our Side</h2>
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+        {sponsors.length === 2 ? (
+          <div className="col-span-full flex justify-center gap-6">
+            {sponsors.map((src, i) => (
+              <div
+                key={i}
+                className="rounded-[--radius-2xl] border border-cream/10 p-6"
+              >
+                <img src={src} alt="" className="max-h-10" />
+              </div>
+            ))}
           </div>
-        ))}
+        ) : (
+          sponsors.map((src, i) => (
+            <div
+              key={i}
+              className="rounded-[--radius-2xl] border border-cream/10 p-6"
+            >
+              <img src={src} alt="" className="max-h-10" />
+            </div>
+          ))
+        )}
       </div>
     </section>
   );
