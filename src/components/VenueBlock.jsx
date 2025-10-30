@@ -1,5 +1,6 @@
 // src/components/VenueBlock.jsx
 import { event } from '../data/event';
+import lake from '../assets/castaic.jpg';
 
 export default function VenueBlock() {
   return (
@@ -7,7 +8,7 @@ export default function VenueBlock() {
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="relative rounded-[--radius-2xl] overflow-hidden border border-cream/10">
           <img
-            src={event.venueImage ?? '/venue.jpg'}
+            src={lake}
             alt={event.venueName ?? 'Venue'}
             className="w-full h-[300px] md:h-[420px] object-cover"
           />

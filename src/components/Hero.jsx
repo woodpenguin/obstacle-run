@@ -1,12 +1,13 @@
 // src/components/Hero.jsx
 import { event } from '../data/event';
+import fridge from '../assets/fridge.gif';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[80vh] -mx-[--spacing-gutter] grid place-items-center overflow-hidden">
       {/* Full-bleed background (replace with your image if you have one) */}
       <img
-        src="/hero-still.jpg"
+        src={fridge}
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
